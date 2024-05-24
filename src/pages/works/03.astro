@@ -1,0 +1,33 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Caption from '../../components/Caption.astro';
+import Img from '../../components/Img.astro';
+---
+
+<Layout title="03">
+        <Caption>
+            <h2>UPE MUZIKA オリジナルカセットテープ "ウぺムジカの時間"</h2>
+            <p>For : UPE MUZIKA<br>
+            Graphic design : TAMURA Ikuho<br>
+            2020</p>
+            <p>-</p>
+        </Caption>
+        <Img>
+            <img src="../../public/asset/img/03.webp" alt="Image 03">
+        </Img>
+</Layout>
+
+<style>    
+    img {
+        width: 65vw;
+        margin: auto;
+        display: block;
+    }
+
+    @media screen and (max-width: 560px){
+        img {
+        width: 90vw;
+
+        }
+    }
+</style>

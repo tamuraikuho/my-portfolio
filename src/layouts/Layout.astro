@@ -1,0 +1,59 @@
+---
+const {title} = Astro.props;
+const color = '#ffffff';
+const color2 = '#9caeb7';
+const hover = '#4169e1';
+import Nav from '../components/Nav.astro';
+import Credit from '../components/Credit.astro';
+---
+
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+	<title>{title}</title>
+</head>
+<body>
+	<Nav></Nav>
+	<slot />
+	<Credit></Credit>
+</body>
+</html>
+
+<style is:global define:vars={{color, color2,hover}}>
+	body {
+		font-family: "Inter Tight",sans-serif;
+		font-optical-sizing: auto;
+		font-weight: <weight>;
+		font-style: normal;
+		text-decoration: none;
+		color: var(--color);
+		margin: 0rem 1.2rem 0rem 1.2rem;
+		background-color:var(--color2);
+	}
+
+	a {
+		text-decoration: none;
+		color: var(--color);
+	}
+
+	a:hover {
+		color: var(--hover);
+	}
+
+	h1,h2,h3{
+		font-size: 0.9rem;
+		font-weight: 400;
+	}
+
+	p {
+		font-size: 0.85rem;
+		font-weight: 400;
+		line-height: 1.5rem;
+	}
+
+</style>

@@ -1,0 +1,39 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Caption from '../../components/Caption.astro';
+import Img from '../../components/Img.astro';
+---
+
+<Layout title="33">
+        <Caption>
+            <h2>DIGLE SOUND Lounge in Odawara season 2023</h2>
+            <p>For : DIGLE<br>
+            Graphic design : TAMURA Ikuho<br>
+            2023</p>
+            <p>-</p>
+        </Caption>
+        <Img>
+            <img src="../../public/asset/img/33.webp" alt="Image 33">
+        </Img>
+        <Img>
+            <img src="../../public/asset/img/33-2.webp" alt="Image 33-2">
+        </Img>
+        <Img>
+            <img src="../../public/asset/img/33-3.webp" alt="Image 33-3">
+        </Img>
+</Layout>
+
+<style>    
+    img {
+        width: 65vw;
+        margin: auto;
+        display: block;
+    }
+
+    @media screen and (max-width: 560px){
+        img {
+        width: 90vw;
+
+        }
+    }
+</style>

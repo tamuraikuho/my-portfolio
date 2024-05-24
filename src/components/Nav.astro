@@ -1,0 +1,62 @@
+---
+const nav1 = [ {
+    href:'index',
+    label:'Index'
+},
+
+{
+    href:'about',
+    label:'About'
+},
+{
+    href:'https://x.com/metya_sodatuyo',
+    label:'Contact'
+},
+]
+
+const nav2 = [ {
+    href:'pages',
+    label:'TAMURA Ikuho'
+},
+]
+
+import Credit from "./Credit.astro"
+import Social from "./Social.astro"
+
+---
+
+
+<header>
+    <h1>TAMURA Ikuho</h1>
+    <ul>
+        {nav1.map((nav_item) =>
+            <li><a href={nav_item.href}>{nav_item.label}</a></li>
+        )}
+        <li><Social platform="X" username="metya_sodatuyo"></Social></li>
+        <li><Social platform="IG" username="dondon_sodatsuyo"></Social></li>
+    </ul>
+    </div>
+</header>
+
+<style>
+header {
+    display: flex;
+    align-items: center;
+}
+
+h1 {
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+ul {
+    display: flex;
+    list-style: none;
+    margin:0 0 0 auto;
+}
+
+li {
+    margin:0 0 0 1rem;
+}
+
+</style>
